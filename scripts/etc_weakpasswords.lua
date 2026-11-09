@@ -111,7 +111,7 @@ end
 hub.setlistener("onStart", {},
     function()
         next_check = os.time() + 10
-        hub.debug("** Loaded etc_weakpasswords 1.1 **")
+        hub.debug("** Loaded etc_weakpasswords 1.0 **")
     end
 )
 
