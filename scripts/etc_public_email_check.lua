@@ -23,7 +23,7 @@ local report = hub.import("etc_report")
 local DOMAIN_FILE = "scripts/data/etc_public_email_domains.txt"
 
 local USER_MESSAGE =
-    "Security notice: Your client is advertising an email address from a public email provider.\n" ..
+    "\n\n\n Security notice: Your client is advertising an email address from a public email provider.\n" ..
     "This hub flags major public email providers as a privacy and security precaution.\n" ..
     "This is an informational notice only; your account is not restricted.\n"
 
