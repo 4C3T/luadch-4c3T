@@ -76,6 +76,31 @@ local function find_public_domain(domain)
     return nil
 end
 
+-- CHECK USER EMAIL
+local function check_user(user)
+    local sid = user:sid()
+
+    if notified_users[sid] then
+        return
+    end
+
+    local nick = user:firstnick() or "Unknown"
+    local email = user:email()
+
+    if not email or email == "" then
+        return
+    end
+
+    email = string.lower(hub.escapefrom(email))
+
+    local domain = string.match(email, "@([^@]+)$")
+
+    if not domain then
+        return
+    end
+
+    domain = string.match(domain, "^%s*(.-)%s*$")
+
     local matched_domain = find_public_domain(domain)
 
     if matched_domain then
@@ -105,6 +130,7 @@ hub.setlistener("onLogin", {},
     end
 )
 
+-- CLEAR NOTIFICATION STATUS ON LOGOUT
 hub.setlistener("onLogout", {},
     function(user)
         notified_users[user:sid()] = nil
@@ -112,6 +138,7 @@ hub.setlistener("onLogout", {},
     end
 )
 
+-- HOURLY CHECK
 hub.setlistener("onTimer", {},
     function()
         local now = os.time()
