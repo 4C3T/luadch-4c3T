@@ -11,9 +11,9 @@
 ]]
 
 -- IMPORTS
-local io = require "io" --Disable for <v3.2.0
-local os = require "os" --Disable for <v3.2.0
-local string = require "string" --Disable for <v3.2.0
+-- local io = require "io" --Enable for >v3.1.15
+-- local os = require "os" --Enable for <v3.1.15
+-- local string = require "string" --Enable for <v3.1.15
 
 -- SETTINGS
 local PASSWORD_FILE = "scripts/weak_passwords.txt"
