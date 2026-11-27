@@ -123,7 +123,7 @@ check = function(user)
         if (open > 0) or (open == "unknown") then         
             if warnUser then
                 user:reply(badmsg, hub.getbot(), hub.getbot())
-		user:kill( "ISTA 232 " .. banmsg .. bantime .. "\n", "TL-1" )
+		user:kill("ISTA 232 " .. banmsg .. "\n", "TL" .. bantime)
             end
             msg = msg..opmsg..user_nick.." has subsequently been kicked because of it" -- Line that is visible to the OPs
             reportItTo(reportlvl, msg)
