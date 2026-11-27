@@ -14,8 +14,8 @@
 ]]
 
 -- IMPORTS
-local io = require "io" --Disable for v3.2.0
-local string = require "string" --Disable for v3.2.0
+local io = require "io" --Disable for <v3.2.0
+local string = require "string" --Disable for <v3.2.0
 
 local report = hub.import("etc_report")
 
