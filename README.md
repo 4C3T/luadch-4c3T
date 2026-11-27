@@ -14,6 +14,14 @@ Help us translate Luadch-ng into your language. Visit our [Translation Hub](http
 
 🔴🔴 **BETA SOFTWARE - Version 3.2.0 not released yet. Use 3.1 for stable release**
 
+********************************
+Notes for this fork by 4c3T:
+Some scripts are working for the v3.2.0-dev so this should be commented in some of the scripts. Note that NOT all scripts are compatible since some of the variables users different LUA versions, and also can be set as global variables, as well as there are a few security limitations compared to v3.1.15
+
+If you're having issues, pull a request and I'll see what I can do. Keep in mind that I'm not a programmer by any means.
+This said, if you can't find a solution, check the top-branch of this fork for help /4c3T
+********************************
+
 ## Features in 3.2
 
 - 📜 Full ADC hub protocol support, TLS 1.3, ADCS-only
@@ -87,7 +95,7 @@ Any help or pull request is welcome. Please open an issue for bugs or improvemen
 ## AI-Transparency
 
 This fork uses Claude Code to help with analyzing, planning, and writing code.
-
+Some scripts has been made with the help of ChatGPT.com /4c3T
 ## License
 
 GPLv3.0 — see [LICENSE](LICENSE).
